@@ -2,6 +2,8 @@ import urllib.request
 import socket 
 import smtplib
 
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
   
 def get_Host_name_IP(): 
     try: 
@@ -31,7 +33,14 @@ def send_mail(internal,external):
     server.starttls() # Use TLS
     server.ehlo()
     server.login(email, password) # Login to the email server
-    server.sendmail(email, send_to_email , message) # Send the email
+    
+    multipart_message = MIMEMultipart()
+    multipart_message['From']=email
+    multipart_message['To']=send_to_email
+    multipart_message['Subject']="IP_Address from RPi"
+    multipart_message.attach(MIMEText(message, 'plain'))
+    
+    server.send_message(multipart_message) # Send the email
     server.quit() # Logout of the email server
 
 internal = get_Host_name_IP()
