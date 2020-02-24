@@ -1,4 +1,4 @@
-import urllib2
+import urllib.request
 
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
@@ -12,10 +12,10 @@ class LedBasis(Resource):
     def get(self, basis):
         input = str(basis).lower()
         if input=="on":
-            response = urllib2.urlopen('https://unreduced-warthog-8220.dataplicity.io/led/on')
+            response = urllib.request.urlopen('https://unreduced-warthog-8220.dataplicity.io/led/on')
             return ("LED is on")
         else:
-            response = urllib2.urlopen('https://unreduced-warthog-8220.dataplicity.io/led/off')
+            response = urllib.request.urlopen('https://unreduced-warthog-8220.dataplicity.io/led/off')
             return ("LED is off")
 
 
