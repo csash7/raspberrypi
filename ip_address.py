@@ -23,8 +23,8 @@ def get_external_ip():
         return ("couldn't get external-ip")
 
 def send_mail(internal,external):
-    email = 'csash7@gmail.com' # Your email
-    password = 'IN143@HARSHA' # Your email account password
+    email = 'something@something' # Your email
+    password = 'password' # Your email account password
     send_to_email = 'csash7@gmail.com' # Who you are sending the message to
     message = 'Internal-IP: '+str(internal)+'\n'+ 'External-Ip: '+str(external) # The message in the email
 
