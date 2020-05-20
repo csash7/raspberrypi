@@ -6,7 +6,7 @@ screenWidth, screenHeight = pyautogui.size()
 
 currentMouseX, currentMouseY = pyautogui.position()
 
-consumer = KafkaConsumer('test', bootstrap_servers=['iotproject.space:9092'])
+consumer = KafkaConsumer('test', bootstrap_servers=['34.73.33.253:9092'])
 
 def moveMouse(ordinate, value):
     if ordinate=='x':
