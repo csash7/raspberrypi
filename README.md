@@ -1,3 +1,9 @@
+Labs code is available under labs folder.<br/>
+Django-pincontrol: Controlling Raspberry Pi pins using Django.<br/>
+ip_address.py: Sending IP Address of the Raspberry Pi to mail on booting up.<br/>
+led_rest.py: Controlling LED on Raspberry Pi using Flask REST API.<br/>
+blink.js: Making LED blink using nodejs app.<br/>
+
 Final Project: Controlling PC using Arduino Nano BLE Sense<br/>
 https://store.arduino.cc/usa/nano-33-ble-sense  (~$31) <br/>
 Project Files link:  https://drive.google.com/drive/folders/1z3yzlgPYmeYHA0o347SrBd07SaUm5ZoA?usp=sharing<br/>
